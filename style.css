@@ -1,0 +1,180 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #AECCE8;
+}
+
+.logo {
+    padding-top: 20px;
+    margin-bottom: 5px;
+  
+}
+.logo img{
+    height:124px ;
+    width: 130px;
+    
+    
+}
+.logo h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.cherry-swash {
+    font-family: 'Cherry Swash', cursive;
+}
+.heading {
+    margin-bottom: 5px;
+}
+.heading h1{
+    font-family: 'Indie Flower', cursive;
+    font-size: 60px;
+    
+}
+.heading p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+}
+
+.search-box {
+    margin-bottom: 5px;
+}
+
+.search-box input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 250px;
+    transition: all 0.3s ease; 
+}
+
+.search-box input:hover {
+    border-color: #3872cf;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    background-color: #f9f9f9; 
+}
+
+.flashcards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-width: 1200px; 
+    margin-top: 20px;
+    gap: 90px;
+    
+}
+
+.flashcard {
+    width: 200px; 
+    height: 300px; 
+    perspective: 1000px;
+    margin: 10px;
+    
+}
+
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.flashcard-front {
+    background-color: #799FDD;
+    color: #090909;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard-front h3 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+.flashcard-back {
+    background-color: #304669;
+    color: #fff;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg);
+}
+
+.flashcard-back p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+button {
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Indie Flower', cursive; 
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 20px; 
+    cursor: pointer;
+}
+
+.view-detail {
+    background-color: #304669;
+    color: #fff;
+}
+
+.close {
+    background-color: #799FDD;
+    color: #fff;
+}
+
+.flashcard.detailed-view {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    z-index: 1000;
+    transition: width 0.1s, height 0.1s, top 0.1s, left 0.1s, transform 0.1s;
+}
+
+.flashcard-back {
+    transform: rotateY(180deg) translateY(-10%);
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; 
+    background-color: #AECCE8;
+    margin-top: 90px; 
+    padding-bottom: 50px;
+}
+
+.footer p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #292f30d1; 
+}
